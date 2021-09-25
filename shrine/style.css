@@ -1,0 +1,1133 @@
+@import url(material-color.css);
+
+:root {
+    --ion-color-primary: #fedbd0;
+    --ion-color-primary-rgb: 254, 216, 208;
+    /*--ion-color-primary-contrast: #000000;*/
+    /*--ion-color-primary-contrast-rgb: 0, 0, 0;*/
+    --ion-color-primary-contrast: #442c2e;
+    --ion-color-primary-contrast-rgb: 68, 44, 46;
+    --ion-color-primary-shade: #442c2e;
+    --ion-color-primary-tint: #fedcd5;
+
+    --ion-color-secondary: #feeae6;
+    --ion-color-secondary-rgb: 254, 234, 230;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0, 0, 0;
+    --ion-color-secondary-shade: #e0ceca;
+    --ion-color-secondary-tint: #feece9;
+
+    --ion-color-tertiary: #5260ff;
+    --ion-color-tertiary-rgb: 82, 96, 255;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+    --ion-color-tertiary-shade: #4854e0;
+    --ion-color-tertiary-tint: #6370ff;
+
+    --ion-color-success: #2dd36f;
+    --ion-color-success-rgb: 45, 211, 111;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255, 255, 255;
+    --ion-color-success-shade: #28ba62;
+    --ion-color-success-tint: #42d77d;
+
+    --ion-color-warning: #ffc409;
+    --ion-color-warning-rgb: 255, 196, 9;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e0ac08;
+    --ion-color-warning-tint: #ffca22;
+
+    --ion-color-danger: #eb445a;
+    --ion-color-danger-rgb: 235, 68, 90;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #cf3c4f;
+    --ion-color-danger-tint: #ed576b;
+
+    --ion-color-dark: #222428;
+    --ion-color-dark-rgb: 34, 36, 40;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255, 255, 255;
+    --ion-color-dark-shade: #1e2023;
+    --ion-color-dark-tint: #383a3e;
+
+    --ion-color-medium: #92949c;
+    --ion-color-medium-rgb: 146, 148, 156;
+    --ion-color-medium-contrast: #ffffff;
+    --ion-color-medium-contrast-rgb: 255, 255, 255;
+    --ion-color-medium-shade: #808289;
+    --ion-color-medium-tint: #9d9fa6;
+
+    --ion-color-light: #f4f5f8;
+    --ion-color-light-rgb: 244, 245, 248;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0, 0, 0;
+    --ion-color-light-shade: #d7d8da;
+    --ion-color-light-tint: #f5f6f9;
+
+    --mdc-theme-primary: var(--ion-color-primary);
+    --mdc-theme-on-primary: var(--ion-color-primary-contrast);
+    --mdc-theme-secondary: var(--ion-color-secondary);
+    --mdc-theme-on-secondary: var(--ion-color-primary-contrast);
+    --mdc-theme-surface: #fffbfa;
+    --mdc-theme-on-surface: var(--ion-color-primary-contrast);
+
+    --ion-background-color: var(--mdc-theme-surface);
+    --ion-background-color-rgb: 255, 251, 250;
+
+    --ion-text-color: var(--ion-color-primary-contrast);
+    --ion-text-color-rgb: var(--ion-color-primary-contrast-rgb);
+}
+
+.surface-shrine {
+    background-color: var(--mdc-theme-surface);
+}
+
+.on-surface-shrine {
+    color: var(--mdc-theme-on-surface);
+}
+
+.mdc-select-fill-color-transparent {
+    --mdc-select-fill-color: transparent
+}
+
+html {
+    background-color: #fffbfa;
+}
+
+html.ios {
+    --ion-default-font: "Noto Sans SC", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+}
+
+html.md {
+    --ion-default-font: "Noto Sans SC", "Helvetica Neue", sans-serif;
+}
+
+body.dark {
+    --ion-color-primary: #428cff;
+    --ion-color-primary-rgb: 66, 140, 255;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #3a7be0;
+    --ion-color-primary-tint: #5598ff;
+
+    --ion-color-secondary: #50c8ff;
+    --ion-color-secondary-rgb: 80, 200, 255;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #46b0e0;
+    --ion-color-secondary-tint: #62ceff;
+
+    --ion-color-tertiary: #6a64ff;
+    --ion-color-tertiary-rgb: 106, 100, 255;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+    --ion-color-tertiary-shade: #5d58e0;
+    --ion-color-tertiary-tint: #7974ff;
+
+    --ion-color-success: #2fdf75;
+    --ion-color-success-rgb: 47, 223, 117;
+    --ion-color-success-contrast: #000000;
+    --ion-color-success-contrast-rgb: 0, 0, 0;
+    --ion-color-success-shade: #29c467;
+    --ion-color-success-tint: #44e283;
+
+    --ion-color-warning: #ffd534;
+    --ion-color-warning-rgb: 255, 213, 52;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e0bb2e;
+    --ion-color-warning-tint: #ffd948;
+
+    --ion-color-danger: #ff4961;
+    --ion-color-danger-rgb: 255, 73, 97;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #e04055;
+    --ion-color-danger-tint: #ff5b71;
+
+    --ion-color-dark: #f4f5f8;
+    --ion-color-dark-rgb: 244, 245, 248;
+    --ion-color-dark-contrast: #000000;
+    --ion-color-dark-contrast-rgb: 0, 0, 0;
+    --ion-color-dark-shade: #d7d8da;
+    --ion-color-dark-tint: #f5f6f9;
+
+    --ion-color-medium: #989aa2;
+    --ion-color-medium-rgb: 152, 154, 162;
+    --ion-color-medium-contrast: #000000;
+    --ion-color-medium-contrast-rgb: 0, 0, 0;
+    --ion-color-medium-shade: #86888f;
+    --ion-color-medium-tint: #a2a4ab;
+
+    --ion-color-light: #222428;
+    --ion-color-light-rgb: 34, 36, 40;
+    --ion-color-light-contrast: #ffffff;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
+    --ion-color-light-shade: #1e2023;
+    --ion-color-light-tint: #383a3e;
+}
+
+/*
+ * iOS Dark Theme
+ * -------------------
+ */
+
+.ios body.dark {
+    --ion-background-color: #000000;
+    --ion-background-color-rgb: 0, 0, 0;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255, 255, 255;
+
+    --ion-color-step-50: #0d0d0d;
+    --ion-color-step-100: #1a1a1a;
+    --ion-color-step-150: #262626;
+    --ion-color-step-200: #333333;
+    --ion-color-step-250: #404040;
+    --ion-color-step-300: #4d4d4d;
+    --ion-color-step-350: #595959;
+    --ion-color-step-400: #666666;
+    --ion-color-step-450: #737373;
+    --ion-color-step-500: #808080;
+    --ion-color-step-550: #8c8c8c;
+    --ion-color-step-600: #999999;
+    --ion-color-step-650: #a6a6a6;
+    --ion-color-step-700: #b3b3b3;
+    --ion-color-step-750: #bfbfbf;
+    --ion-color-step-800: #cccccc;
+    --ion-color-step-850: #d9d9d9;
+    --ion-color-step-900: #e6e6e6;
+    --ion-color-step-950: #f2f2f2;
+
+    --ion-toolbar-background: #0d0d0d;
+
+    --ion-item-background: #1c1c1c;
+    --ion-item-background-activated: #313131;
+}
+
+/*
+ * Material Design Dark Theme
+ * ------------------------------
+ */
+
+.md body.dark {
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18, 18, 18;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255, 255, 255;
+
+    --ion-border-color: #222222;
+
+    --ion-color-step-50: #1e1e1e;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-color-step-200: #414141;
+    --ion-color-step-250: #4d4d4d;
+    --ion-color-step-300: #595959;
+    --ion-color-step-350: #656565;
+    --ion-color-step-400: #717171;
+    --ion-color-step-450: #7d7d7d;
+    --ion-color-step-500: #898989;
+    --ion-color-step-550: #949494;
+    --ion-color-step-600: #a0a0a0;
+    --ion-color-step-650: #acacac;
+    --ion-color-step-700: #b8b8b8;
+    --ion-color-step-750: #c4c4c4;
+    --ion-color-step-800: #d0d0d0;
+    --ion-color-step-850: #dbdbdb;
+    --ion-color-step-900: #e7e7e7;
+    --ion-color-step-950: #f3f3f3;
+
+    --ion-item-background: #1a1b1e;
+}
+
+/* Optional CSS, this is added for the flashing that happens when toggling between themes */
+ion-item {
+    --transition: none;
+}
+
+ion-title {
+    letter-spacing: 0.15px;
+}
+
+ion-button {
+    letter-spacing: 1.25px;
+}
+
+h5, ion-card-title {
+    /* careful
+    line-height: 1;
+    margin-top: 24px;
+    margin-bottom: 16px; */
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.subtitle1{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+}
+
+.subtitle2{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+p, .body-1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+ion-card-content, .body-2 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+ion-card-subtitle, .overline {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: #ffffff;
+    content: attr(data-tooltip);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.0333333333em;
+    line-height: 16px;
+    max-height: 40vh;
+    min-height: 24px;
+    max-width: 200px;
+    min-width: 40px;
+    opacity: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding: 4px 8px;
+    position: absolute;
+    text-transform: unset;
+    transform-origin: center;
+    transform: translate(-50%, -100%);
+    transition: opacity 150ms 0ms cubic-bezier(0, 0, 0.2, 1),
+    transform 150ms 0ms cubic-bezier(0, 0, 0.2, 1);
+    word-break: break-all;
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.box-shadow-none {
+    --box-shadow: none;
+}
+
+/* background utils */
+.background-clip-content-box {
+    background-clip: content-box;
+}
+
+.background-size-contain {
+    background-size: contain;
+}
+
+.background-size-cover {
+    background-size: cover;
+}
+
+.background-size-60-percent {
+    background-size: 60%;
+}
+
+.background-repeat-no {
+    background-repeat: no-repeat;
+}
+
+.background-position-center {
+    background-position: center;
+}
+
+.background-position-center-bottom {
+    background-position: center bottom;
+}
+
+/* border utils */
+.border-2-solid-primary {
+    border: 2px solid var(--ion-color-primary);
+}
+
+.border-top-1-solid-primary-shade {
+    border-top: 1px solid var(--ion-color-primary-shade);
+}
+
+.border-top-1-solid-secondary-shade {
+    border-top: 1px solid var(--ion-color-secondary-shade);
+}
+
+.border-radius-50-percent {
+    border-radius: 50%;
+}
+
+.--border-radius-50-percent {
+    --border-radius: 50%;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.border-color-primary-shade {
+    border-color: var(--ion-color-primary-shade);
+}
+
+.border-color-white {
+    --border-color: white;
+    border-color: white;
+}
+
+/*color utils*/
+.color--primary {
+    background-color: var(--ion-color-primary);
+}
+.color--primary-shade {
+    background-color: var(--ion-color-primary-shade);
+}
+
+.color--text-primary-shade {
+    color: var(--ion-color-primary-shade);
+}
+
+.color--secondary {
+    background-color: var(--ion-color-secondary);
+}
+
+.color-text--light {
+    --color: var(--ion-color-light);
+    /*color: var(--ion-color-light);*/
+}
+
+.color-checked-text--primary {
+    --color-checked: var(--ion-color-primary);
+}
+
+.color-text--secondary {
+    --color: var(--ion-color-secondary);
+    color: var(--ion-color-secondary);
+}
+
+.color--transparent {
+    --background: transparent;
+    background-color: transparent;
+}
+
+/* padding utils */
+.padding-1 {
+    padding: 1px;
+}
+
+.padding-2 {
+    padding: 2px;
+}
+
+.padding-4 {
+    padding: 4px;
+}
+
+.padding-6 {
+    padding: 6px;
+}
+
+.padding-8 {
+    padding: 8px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-24 {
+    padding: 24px;
+}
+
+.padding-32 {
+    padding: 32px;
+}
+
+.padding-top-56 {
+    padding-top: 56px;
+}
+
+.padding-bottom-56 {
+    padding-bottom: 56px;
+}
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+.padding-left-8 {
+    padding-left: 8px;
+}
+
+.padding-8-16 {
+    padding: 8px 16px;
+}
+
+.padding-left-20 {
+    padding-left: 20px;
+}
+
+.padding-left-48 {
+    padding-left: 48px;
+}
+
+.padding-16-8 {
+    padding: 16px 8px;
+}
+
+.padding-bottom-40 {
+    padding-bottom: 40px;
+}
+
+.padding-bottom-80 {
+    padding-bottom: 80px;
+}
+
+.padding-top-40 {
+    padding-top: 40px;
+}
+
+.padding-top-230 {
+    padding-top: 230px;
+}
+
+/* margin utils */
+.margin-auto {
+    margin: auto;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.margin-left-24 {
+    margin-left: 24px;
+}
+
+.margin-right-24 {
+    margin-right: 24px;
+}
+
+.margin-right-32 {
+    margin-right: 12px;
+}
+
+.margin-right-8 {
+    margin-right: 8px;
+}
+
+.margin-right-48 {
+    margin-right: 48px;
+}
+
+.margin-right-64 {
+    margin-right: 64px;
+}
+
+.margin-right-88 {
+    margin-right: 88px;
+}
+
+.margin-top-30vh {
+    margin-top: -30vh;
+}
+
+.margin-top-48 {
+    margin-top: 48px;
+}
+
+.margin-top--48 {
+    margin-top: -48px;
+}
+
+.margin-top-60 {
+    margin-top: 60px;
+}
+
+.margin-top-264 {
+    margin-top: 264px;
+}
+
+.margin-vertical-4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/*clip utils*/
+.clip-path-corner-4 {
+    clip-path: polygon(
+            4px 0,
+            calc(100% - 4px) 0,
+            100% 4px,
+            100% calc(100% - 4px),
+            calc(100% - 4px) 100%,
+            4px 100%,
+            0 calc(100% - 4px),
+            0 4px
+    );
+}
+
+.clip-path-corner-8 {
+    clip-path: polygon(
+            8px 0,
+            calc(100% - 8px) 0,
+            100% 8px,
+            100% calc(100% - 8px),
+            calc(100% - 8px) 100%,
+            8px 100%,
+            0 calc(100% - 8px),
+            0 8px
+    );
+}
+
+.clip-path-corner-left-top-24 {
+    clip-path: polygon(
+        24px 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 24px
+    );
+}
+
+.clip-path-corner-right-top-icon {
+    clip-path: polygon(
+        0 0,
+        50% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
+/*display utils*/
+.display-flex {
+    display: flex;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+/* flex utils */
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-0 {
+    flex: 0;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+/*font utils*/
+.font-size-34 {
+    font-size: 34px;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+/*image utils*/
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.object-position-left {
+    object-position: left;
+}
+
+/*opacity utils*/
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-60 {
+    opacity: .6;
+}
+
+.opacity-87 {
+    opacity: .87;
+}
+
+/* position utils */
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-unset {
+    position: unset;
+}
+
+.left-50-percent {
+    left: 50%;
+}
+
+.top-50-percent {
+    top: 50%;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.left-100-percent {
+    left: 100%;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.right--100-percent {
+    right: -100%;
+}
+
+.transform_translate--50-percent--50-percent {
+    transform: translate(-50%, -50%);
+}
+
+/* size utils */
+.height-auto {
+    height: auto;
+}
+
+.height-0 {
+    height: 0;
+}
+
+.height-2 {
+    height: 2px;
+}
+
+.height-6 {
+    height: 6px;
+}
+
+.height-12 {
+    height: 12px;
+}
+
+.height-36 {
+    height: 36px;
+}
+
+.height-40 {
+    height: 40px;
+}
+
+.height-56 {
+    height: 56px;
+}
+
+.height-140 {
+    height: 140px;
+}
+
+.height-160 {
+    height: 160px;
+}
+
+.height-242 {
+    height: 242px;
+}
+
+.height-300 {
+    height: 300px;
+}
+
+.height-350 {
+    height: 350px;
+}
+
+.height-576 {
+    height: 576px;
+}
+
+.height-40vh {
+    height: 40vh;
+}
+
+.height-64-width-64 {
+    height: 64px;
+    width: 64px;
+}
+
+.height-100-percent {
+    height: 100%;
+}
+
+.max-height-354 {
+    max-height: 354px;
+}
+
+.max-height-768 {
+    max-height: 768px;
+}
+
+.min-height-200 {
+    min-height: 200px;
+}
+
+.max-width-188 {
+    max-width: 188px;
+}
+
+.max-width-550 {
+    max-width: 550px;
+}
+
+.max-width-768 {
+    max-width: 768px;
+}
+
+.max-width-992 {
+    max-width: 992px;
+}
+
+.max-width-1000 {
+    max-width: 1000px;
+}
+
+.min-width-32 {
+    min-width: 32px;
+}
+
+.width-6 {
+    width: 6px;
+}
+
+.width-36 {
+    width: 36px;
+}
+
+.width-40 {
+    width: 40px;
+}
+
+.width-40-percent {
+    width: 40%;
+}
+
+.width-50-percent {
+    width: 50%;
+}
+
+.width-56 {
+    width: 56px;
+}
+
+.width-66 {
+    width: 66px;
+}
+
+.width-110 {
+    width: 110px;
+}
+
+.width-140 {
+    width: 140px;
+}
+
+.width-160 {
+    width: 160px;
+}
+
+.width-188 {
+    width: 188px;
+}
+
+.width-100-percent {
+    width: 100%;
+}
+
+.width-300 {
+    width: 300px;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.quote::before {
+    content: "“";
+}
+
+.quote::after {
+    content: "”";
+}
+
+.transform-origin-top {
+    transform-origin: top;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+/* line utils */
+.line-height-1 {
+    line-height: 1;
+}
+
+.line-height-2 {
+    line-height: 2;
+}
+
+.line-height-3 {
+    line-height: 3;
+}
+
+.line-height-48 {
+    line-height: 48;
+}
+
+.line-height-87 {
+    line-height: 87px;
+}
+
+/*z-index utils*/
+.z-index-1 {
+    z-index: 1;
+}
+
+.blog::before {
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    content: "";
+    will-change: transform;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 512px) and (-webkit-min-device-pixel-ratio: 1.5),
+(max-width: 512px) and (min-resolution: 1.5dppx),
+(max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
+(max-width: 1024px) and (max-resolution: 1.5dppx) {
+    .blog::before {
+        /*background-image: url("images/bg_1024.jpg");*/
+    }
+}
+
+@media (min-width: 513px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
+(min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx),
+(min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
+(min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {
+    .blog::before {
+        /*background-image: url("images/bg_2048.jpg");*/
+    }
+}
+
+@media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
+(min-width: 1025px) and (min-resolution: 1.5dppx),
+(min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
+(min-width: 2049px) and (max-resolution: 1.5dppx) {
+    .blog::before {
+        /*background-image: url("images/bg_2880.jpg");*/
+    }
+}
+
+@media (max-width: 575.98px) {
+    .flex-direction-column-sm-down {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .flex-direction-column-md-down {
+        flex-direction: column;
+    }
+
+    .padding-40-28-md-down {
+        padding: 40px 28px;
+    }
+
+    .font-size-16-md-down {
+        font-size: 16px;
+    }
+
+    .font-size-26-md-down {
+        font-size: 26px;
+    }
+
+    .height-350-md-down {
+        height: 350px;
+    }
+
+    .padding-top-160-md-down {
+        padding-top: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+    .padding-80-56-md-up {
+        padding: 80px 56px;
+    }
+
+    .padding-top-160-md-up {
+        padding-top: 160px;
+    }
+
+    .padding-top-460-md-up {
+        padding-top: 460px;
+    }
+
+    .font-size-21-md-up {
+        font-size: 21px;
+    }
+
+    .font-size-60-md-up {
+        font-size: 60px;
+    }
+
+    .height-800-md-up {
+        height: 800px;
+    }
+
+    .mdl-mega-footer .mdl-mega-footer--bottom-section {
+        display: block;
+    }
+
+    .demo-main {
+        padding: 80px 56px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        margin: 8px 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .padding-80-56-lg-up {
+        padding: 80px 56px;
+    }
+
+    .height-298-lg-up {
+        height: 298px;
+    }
+
+    .margin-left-56-lg-up {
+        margin-left: 56px;
+    }
+
+    .margin-right-56-lg-up {
+        margin-right: 56px;
+    }
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*  }*/
+/*}*/
+
+[name="size"]:checked + label,
+[name="color"]:checked + label {
+    border-color: var(--ion-color-primary-shade);
+}
+
+[name="color"]:checked + label {
+    padding: 4px;
+    transition: padding .1s ease-in;
+}
+
+.menu-buttons {
+    transition: height .5s linear;
+}
+
+.shopping-cart {
+    transition: right .5s linear;
+}

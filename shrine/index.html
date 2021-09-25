@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="color-scheme" content="light dark"/>
+    <meta charset="UTF-8"/>
+    <title>anlex N</title>
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+            nomodule
+            src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="material.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="../src/main.js"></script>
+</head>
+
+<body>
+<ion-app>
+    <ion-content>
+        <ion-toolbar color="primary" class="padding-left-8">
+            <ion-icon
+                    slot="start"
+                    size="large"
+                    name="menu-outline"
+                    class="clip-path-corner-right-top-icon menu-icon"
+            ></ion-icon>
+            <ion-icon
+                    slot="start"
+                    size="large"
+                    src="images/ic_shrine_24px.svg"
+            ></ion-icon>
+            <ion-title slot="start" class="shrine-title">SHRINE</ion-title>
+            <!--            <ion-input placeholder="SEARCH SHRINE" class="shrine-search" hidden></ion-input>-->
+            <ion-item color="primary" class="shrine-search item-has-focus" hidden>
+                <ion-input placeholder="SEARCH SHRINE"></ion-input>
+            </ion-item>
+            <ion-buttons slot="end">
+                <ion-button>
+                    <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+
+        <div
+                class="
+            display-flex
+            flex-direction-column
+            ion-align-items-center
+            color--primary
+            height-0
+            overflow-hidden
+            menu-buttons
+            max-height-354
+          "
+        >
+            <ion-button class="box-shadow-none">FEATURED</ion-button>
+            <ion-button class="box-shadow-none">APARTMENT</ion-button>
+            <ion-button class="box-shadow-none">ACCESSORIES</ion-button>
+            <ion-button class="box-shadow-none">SHOES</ion-button>
+            <ion-button class="box-shadow-none">TOPS</ion-button>
+            <ion-button class="box-shadow-none">BOTTOMS</ion-button>
+            <ion-button class="box-shadow-none">DRESSES</ion-button>
+            <div class="height-2 width-36 color--primary-shade"></div>
+            <ion-button class="box-shadow-none">MY ACCOUNT</ion-button>
+        </div>
+
+        <!--        <div class="color&#45;&#45;primary">-->
+        <!--            <div-->
+        <!--                    class="-->
+        <!--              surface-shrine-->
+        <!--              clip-path-corner-left-top-24-->
+        <!--              display-flex-->
+        <!--              ion-justify-content-around-->
+        <!--              ion-wrap-->
+        <!--              ion-align-items-center-->
+        <!--              ion-padding-->
+        <!--              position-relative-->
+        <!--              cart-items-->
+        <!--            "-->
+        <!--            >-->
+        <!--                <div-->
+        <!--                        hidden-->
+        <!--                        class="-->
+        <!--                position-absolute-->
+        <!--                width-100-percent-->
+        <!--                height-100-percent-->
+        <!--                color&#45;&#45;secondary-->
+        <!--                z-index-1-->
+        <!--                opacity-60-->
+        <!--                shrine-mask-->
+        <!--              "-->
+        <!--                ></div>-->
+        <!--                <ion-buttons class="position-absolute top-0 right-0">-->
+        <!--                    <ion-button>-->
+        <!--                        <ion-icon slot="icon-only" name="options-outline"></ion-icon>-->
+        <!--                    </ion-button>-->
+        <!--                </ion-buttons>-->
+
+        <!--                <div class="max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/flow-shirt-blouse.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Flow Shirt Blouse</div>-->
+        <!--                        <div>$240</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/dusty-pink-satchel.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Dusty Pink Satchel</div>-->
+        <!--                        <div>$144</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div-->
+        <!--                        class="ion-text-center max-width-188 position-relative cart-item"-->
+        <!--                >-->
+        <!--                    <img-->
+        <!--                            src="images/bamboo-turntables.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Bamboo Turntables</div>-->
+        <!--                        <div>$133</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/army-long-tunic.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Army Long Tunic</div>-->
+        <!--                        <div>$347</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/white-buttoned-down.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>White Buttoned</div>-->
+        <!--                        <div>$206</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/dusty-pink-satchel.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Dusty Pink Satchel</div>-->
+        <!--                        <div>$144</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/bamboo-turntables.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Bamboo Turntables</div>-->
+        <!--                        <div>$133</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/flow-shirt-blouse.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Flow Shirt Blouse</div>-->
+        <!--                        <div>$240</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/bamboo-turntables.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Bamboo Turntables</div>-->
+        <!--                        <div>$133</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/army-long-tunic.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Army Long Tunic</div>-->
+        <!--                        <div>$347</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/white-buttoned-down.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>White Buttoned</div>-->
+        <!--                        <div>$206</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/white-buttoned-down.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>White Buttoned</div>-->
+        <!--                        <div>$206</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/dusty-pink-satchel.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Dusty Pink Satchel</div>-->
+        <!--                        <div>$144</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/bamboo-turntables.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Bamboo Turntables</div>-->
+        <!--                        <div>$133</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--                <div class="ion-text-center max-width-188 position-relative">-->
+        <!--                    <img-->
+        <!--                            src="images/bamboo-turntables.jpg"-->
+        <!--                            class="object-fit-cover width-100-percent"-->
+        <!--                    />-->
+        <!--                    <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">-->
+        <!--                        <div>Bamboo Turntables</div>-->
+        <!--                        <div>$133</div>-->
+        <!--                    </div>-->
+        <!--                    <ion-buttons class="position-absolute left-0 top-0">-->
+        <!--                        <ion-button>-->
+        <!--                            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>-->
+        <!--                        </ion-button>-->
+        <!--                    </ion-buttons>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <div class="color--primary">
+            <div
+                    class="
+              surface-shrine
+              clip-path-corner-left-top-24
+              cart-items
+              position-relative
+            " style="height: calc(100vh - 56px);"
+            >
+                <div
+                        hidden
+                        class="
+                position-absolute
+                width-100-percent
+                height-100-percent
+                color--secondary
+                z-index-1
+                opacity-60
+                shrine-mask
+              "
+                ></div>
+
+<!--                <div>-->
+                    <ion-buttons class="ion-float-right">
+                        <ion-button>
+                            <ion-icon slot="icon-only" name="options-outline"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+<!--                </div>-->
+
+                <div class="clear-both ion-text-nowrap overflow-x-auto" style="height: calc(100vh - 104px);">
+                    <div class="display-inline-block">
+                        <div class="position-relative margin-left-24 margin-left-56-lg-up" style="margin-top: 20%; width: 260px;">
+                            <img
+                                    src="images/flow-shirt-blouse.jpg"
+                                    class="object-fit-cover height-160 width-100-percent"
+                            />
+                            <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">
+                                <div>Flow Shirt Blouse</div>
+                                <div>$240</div>
+                            </div>
+                            <ion-buttons class="position-absolute left-0 top-0">
+                                <ion-button>
+                                    <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                                </ion-button>
+                            </ion-buttons>
+                        </div>
+                        <div class="position-relative" style="margin-top: 30%; width: 260px;">
+                            <img
+                                    src="images/dusty-pink-satchel.jpg"
+                                    class="object-fit-cover height-160 width-100-percent"
+                            />
+                            <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">
+                                <div>Dusty Pink Satchel</div>
+                                <div>$144</div>
+                            </div>
+                            <ion-buttons class="position-absolute left-0 top-0">
+                                <ion-button>
+                                    <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                                </ion-button>
+                            </ion-buttons>
+                        </div>
+                    </div>
+
+                    <div class="display-inline-block position-relative width-160 margin-left-24 margin-left-56-lg-up margin-right-24 margin-right-56-lg-up" style="transform: translateY(-50%);">
+                        <img
+                                src="images/army-long-tunic.jpg"
+                                class="object-fit-cover height-100-percent width-100-percent"
+                        />
+                        <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">
+                            <div>Dusty Pink Satchel</div>
+                            <div>$144</div>
+                        </div>
+                        <ion-buttons class="position-absolute left-0 top-0">
+                            <ion-button>
+                                <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </div>
+
+                    <div class="display-inline-block">
+                        <div class="position-relative margin-left-24 margin-left-56-lg-up" style="margin-top: 20%; width: 260px;">
+                            <img
+                                    src="images/flow-shirt-blouse.jpg"
+                                    class="object-fit-cover height-160 width-100-percent"
+                            />
+                            <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">
+                                <div>Flow Shirt Blouse</div>
+                                <div>$240</div>
+                            </div>
+                            <ion-buttons class="position-absolute left-0 top-0">
+                                <ion-button>
+                                    <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                                </ion-button>
+                            </ion-buttons>
+                        </div>
+                        <div class="position-relative" style="margin-top: 30%; width: 260px;">
+                            <img
+                                    src="images/dusty-pink-satchel.jpg"
+                                    class="object-fit-cover height-160 width-100-percent"
+                            />
+                            <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">
+                                <div>Dusty Pink Satchel</div>
+                                <div>$144</div>
+                            </div>
+                            <ion-buttons class="position-absolute left-0 top-0">
+                                <ion-button>
+                                    <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                                </ion-button>
+                            </ion-buttons>
+                        </div>
+                    </div>
+
+                    <div class="display-inline-block position-relative width-160 margin-left-24 margin-left-56-lg-up margin-right-24 margin-right-56-lg-up" style="transform: translateY(-50%);">
+                        <img
+                                src="images/army-long-tunic.jpg"
+                                class="object-fit-cover height-100-percent width-100-percent"
+                        />
+                        <div class="subtitle1 ion-text-center opacity-87 ion-text-capitalize">
+                            <div>Dusty Pink Satchel</div>
+                            <div>$144</div>
+                        </div>
+                        <ion-buttons class="position-absolute left-0 top-0">
+                            <ion-button>
+                                <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+    </ion-content>
+</ion-app>
+
+<ion-buttons
+        class="
+            position-fixed
+            bottom-0
+            right-0
+            color--secondary
+            clip-path-corner-left-top-24
+            padding-8-16
+            shopping-cart
+          "
+        style="z-index: 20004"
+>
+    <ion-button class="checkout-button">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+    <ion-button style="--border-radius: 50%; height: 56px; width: 56px">
+        <div
+                style="background-image: url(images/succulent-set.jpg)"
+                class="height-40 width-40 border-radius-10 background-size-cover"
+        ></div>
+    </ion-button>
+    <ion-button style="--border-radius: 50%; height: 56px; width: 56px">
+        <div
+                style="background-image: url(images/dusty-pink-satchel.jpg)"
+                class="height-40 width-40 border-radius-10 background-size-cover"
+        ></div>
+    </ion-button>
+</ion-buttons>
+
+<script type="module">
+    const $menuIcons = document.querySelector(".menu-icon");
+    const $shrineTitle = document.querySelector(".shrine-title");
+    const $shrineSearch = document.querySelector(".shrine-search");
+    const $menuButtons = document.querySelector(".menu-buttons");
+    const $cartItems = document.querySelector(".cart-items");
+    const $cartItem = document.querySelector(".cart-item");
+    const $shoppingCart = document.querySelector(".shopping-cart");
+    const $shrineMask = document.querySelector(".shrine-mask");
+    const $checkoutButton = document.querySelector('.checkout-button');
+
+    $menuIcons.addEventListener("click", () => {
+        $menuIcons.hidden = !$menuIcons.hidden;
+        $shrineTitle.hidden = !$shrineTitle.hidden;
+        $shrineSearch.hidden = !$shrineSearch.hidden;
+        $menuButtons.classList.toggle("height-100-percent");
+        $shoppingCart.classList.toggle("right--100-percent");
+        // $shrineMask.classList.toggle("opacity-60");
+        $shrineMask.hidden = !$shrineMask.hidden;
+        $cartItems.addEventListener(
+            "click",
+            () => {
+                $menuIcons.hidden = !$menuIcons.hidden;
+                $shrineTitle.hidden = !$shrineTitle.hidden;
+                $shrineSearch.hidden = !$shrineSearch.hidden;
+                $menuButtons.classList.toggle("height-100-percent");
+                $shoppingCart.classList.toggle("right--100-percent");
+                // $shrineMask.classList.toggle("opacity-60");
+                $shrineMask.hidden = !$shrineMask.hidden;
+            },
+            {once: true}
+        );
+    });
+
+    for (let i = 2; i < $cartItems.children.length; i++) {
+        $cartItems.children[i].addEventListener('click', cartItemModal);
+    }
+
+    function cartItemModal() {
+        const $element = document.createElement('div');
+        $element.style.overflow = 'auto';
+        $element.style.justifyContent = 'flex-start';
+        $element.innerHTML = `
+        <ion-toolbar class="color--transparent position-absolute top-0">
+            <ion-buttons slot="start">
+                <ion-button class="cart-item-close">
+                    <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+
+            <ion-buttons slot="end">
+                <ion-button>
+                    <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+                </ion-button>
+                <ion-button>
+                    <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+        <div class="position-relative">
+            <div style="background-image: url(images/flow-shirt-blouse@2x.jpg);"
+                 class="image height-242 height-298-lg-up width-100-percent background-repeat-no background-size-cover"
+                 value="flow-shirt-blouse-1"></div>
+
+            <div style="background-image: url(images/flow-shirt-blouse@2x.jpg);"
+                 class="image height-242 height-298-lg-up width-100-percent background-repeat-no background-size-cover"
+                 value="flow-shirt-blouse-2"
+                 hidden></div>
+
+            <div style="background-image: url(images/flow-shirt-blouse@2x.jpg);"
+                 class="image height-242 height-298-lg-up width-100-percent background-repeat-no background-size-cover"
+                 value="flow-shirt-blouse-3"
+                 hidden></div>
+
+            <ion-segment class="ion-justify-content-end position-absolute bottom-0 image-segment"
+                         value="flow-shirt-blouse-1">
+                <ion-segment-button class="flex-0 color-text--light min-width-32" value="flow-shirt-blouse-1">
+                    <div class="font-size-34">.</div>
+                </ion-segment-button>
+                <ion-segment-button class="flex-0 color-text--light min-width-32" value="flow-shirt-blouse-2">
+                    <div class="font-size-34">.</div>
+                </ion-segment-button>
+                <ion-segment-button class="flex-0 color-text--light min-width-32" value="flow-shirt-blouse-3">
+                    <div class="font-size-34">.</div>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+        <div class="ion-padding display-flex flex-direction-column">
+            <div class="display-flex ion-align-items-center">
+                <ion-icon src="images/lmb.svg"></ion-icon>
+                <div class="body-2 ion-margin-start">LMBRJK</div>
+                <h5 class="ion-no-margin ion-align-self-end margin-left-auto">$250</h5>
+            </div>
+            <h5>Flow Shirt Blouse</h5>
+            <div class="body-2">
+                Pinstriped cornflower blue cotton blouse takes you on ?a walk to the park or just down the hall.
+            </div>
+            <p>Select size</p>
+            <div class="ion-text-nowrap overflow-x-auto hide-scrollbar">
+                <input type="radio" id="0"
+                       name="size" value="0" class="ion-hide">
+                <label for="0"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">00</label>
+
+                <input type="radio" id="2"
+                       name="size" value="2" class="ion-hide">
+                <label for="2"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">02</label>
+
+                <input type="radio" id="4"
+                       name="size" value="4" class="ion-hide">
+                <label for="4"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">04</label>
+
+                <input type="radio" id="6"
+                       name="size" value="6" class="ion-hide">
+                <label for="6"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">06</label>
+                <input type="radio" id="8"
+                       name="size" value="8" class="ion-hide">
+                <label for="8"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">08</label>
+                <input type="radio" id="10"
+                       name="size" value="10" class="ion-hide">
+                <label for="10"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">10</label>
+                <input type="radio" id="12"
+                       name="size" value="12" class="ion-hide">
+                <label for="12"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">12</label>
+                <input type="radio" id="14"
+                       name="size" value="14" class="ion-hide">
+                <label for="14"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-10 margin-right-8">14</label>
+            </div>
+            <p>Select color</p>
+            <div class="ion-text-nowrap">
+                <input type="radio" id="black"
+                       name="color" value="black" class="ion-hide">
+                <label for="black"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-50-percent margin-right-8 mdl-color--black background-clip-content-box">
+                </label>
+
+                <input type="radio" id="orange-A200"
+                       name="color" value="orange-A200" class="ion-hide">
+                <label for="orange-A200"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-50-percent margin-right-8 mdl-color--orange-A200 background-clip-content-box">
+                </label>
+
+                <input type="radio" id="light-blue-A200"
+                       name="color" value="light-blue-A200" class="ion-hide">
+                <label for="light-blue-A200"
+                       class="display-inline-block ion-text-center line-height-2 height-36 width-36 border-2-solid-primary border-radius-50-percent margin-right-8 mdl-color--light-blue-A200 background-clip-content-box">
+                </label>
+            </div>
+
+            <ion-button class="clip-path-corner-4">
+                <ion-icon name="cart-outline" slot="start"></ion-icon>
+                ADD TO CART
+            </ion-button>
+
+            <h5>You'll also like</h5>
+        </div>
+        `;
+
+        const $modal = document.createElement('ion-modal');
+        $modal.component = $element;
+
+        const $cartItemClose = $element.querySelector('.cart-item-close');
+        $cartItemClose.addEventListener('click', async () => {
+            await $modal.dismiss();
+        }, {once: true});
+
+        const $images = $element.querySelectorAll(".image");
+        const $imageSegment = $element.querySelector(".image-segment");
+        $imageSegment.addEventListener("ionChange", (event) => {
+            console.log(event.target.value);
+            $images.forEach((image) => {
+                image.getAttribute("value") === event.target.value
+                    ? (image.hidden = false)
+                    : (image.hidden = true);
+            });
+        });
+
+        document.body.appendChild($modal);
+        $modal.present();
+    }
+
+
+    function checkoutModal() {
+        const $element = document.createElement('div');
+        $element.style.overflowY = 'auto';
+        // $element.style.justifyContent = 'flex-start';
+        $element.classList.add('color--secondary');
+        $element.innerHTML = `
+            <ion-toolbar color="secondary">
+                <ion-buttons slot="start">
+                    <ion-button class="checkout-close">
+                        <ion-icon slot="icon-only" name="chevron-down-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+
+                <ion-title slot="start" class="padding-left-0 flex-0">CART</ion-title>
+                <div><span>2</span> ITEMS</div>
+            </ion-toolbar>
+            <div class="display-flex ion-align-items-center">
+                <ion-buttons slot="start">
+                    <ion-button class="checkout-close">
+                        <ion-icon slot="icon-only" name="remove-circle-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <div class="display-flex ion-align-items-center flex-1 ion-padding-vertical border-top-1-solid-secondary-shade">
+                    <div style="background-image: url(images/flow-shirt-blouse@2x.jpg);" class="background-size-cover height-64-width-64">
+                    </div>
+                    <div class="body-2 flex-1">
+                        <span class="ion-padding-start">LMBRJK</span>
+                        <span class="ion-float-right ion-padding-end">$240</span>
+                        <div class="ion-padding-start">Flow Shirt Blouse</div>
+                        <div class="display-flex ion-margin-horizontal ion-margin-top">
+                          <div class="mdc-select width-50-percent mdc-select--filled border-top-1-solid-secondary-shade ion-margin-end">
+                            <div class="mdc-select__anchor width-100-percent" style="background-color: transparent; padding-left: 0;"
+                                 role="button"
+                                 aria-haspopup="listbox"
+                                 aria-expanded="false"
+                                 aria-labelledby="demo-label demo-selected-text">
+                                <span class="mdc-select__selected-text-container height-auto ion-align-self-center">
+                                  <span class="mdc-select__selected-text"></span>
+                                </span>
+                                <span class="mdc-select__dropdown-icon">
+                                     <ion-icon name="caret-down-outline" class="mdc-select__dropdown-icon-inactive"></ion-icon>
+                                     <ion-icon name="caret-up-outline" class="mdc-select__dropdown-icon-active"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth height-160">
+                                <ul class="mdc-list" role="listbox" aria-label="Flow shirt Blouse">
+                                    <li class="mdc-list-item" aria-selected="false" data-value="" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">NO SIZE</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="0" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">00</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="2" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">02</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="4" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">04</label>
+                                    </li>
+                                    <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="6" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">06</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="8"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">08</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="10" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">10</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="12"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">12</label>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+
+                          <div class="mdc-select width-50-percent mdc-select--filled border-top-1-solid-secondary-shade">
+                            <div class="mdc-select__anchor width-100-percent" style="background-color: transparent; padding-left: 0;"
+                                 role="button"
+                                 aria-haspopup="listbox"
+                                 aria-expanded="false"
+                                 aria-labelledby="demo-label demo-selected-text">
+                                <span class="mdc-select__selected-text-container height-auto ion-align-self-center">
+                                  <span class="mdc-select__selected-text"></span>
+                                </span>
+                                <span class="mdc-select__dropdown-icon">
+                                     <ion-icon name="caret-down-outline" class="mdc-select__dropdown-icon-inactive"></ion-icon>
+                                     <ion-icon name="caret-up-outline" class="mdc-select__dropdown-icon-active"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth height-160">
+                                <ul class="mdc-list" role="listbox" aria-label="Succulent Set">
+                                    <li class="mdc-list-item" aria-selected="false" data-value="" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="margin-vertical-4 display-inline-block height-36 overline line-height-3">NO COLOR</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="black" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                               class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--black">
+                                          </label>
+                                    </li>
+                                    <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="orange-A200"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                               class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--orange-A200">
+                                          </label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="light-blue-A200" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                           class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--light-blue-A200">
+                                          </label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="pink-A100"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                               class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--pink-A100">
+                                          </label>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display-flex ion-align-items-center">
+                <ion-buttons slot="start">
+                    <ion-button class="checkout-close">
+                        <ion-icon slot="icon-only" name="remove-circle-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <div class="display-flex ion-align-items-center flex-1 ion-padding-vertical border-top-1-solid-secondary-shade">
+                    <div style="background-image: url(images/succulent-set.jpg)" class="background-size-cover height-64-width-64">
+                    </div>
+                    <div class="body-2 flex-1">
+                        <span class="ion-padding-start">LMBRJK</span>
+                        <span class="ion-float-right ion-padding-end">$20</span>
+                        <div class="ion-padding-start">Succulent Set</div>
+                        <div class="display-flex ion-margin-horizontal ion-margin-top"">
+                            <div class="mdc-select width-50-percent mdc-select--filled border-top-1-solid-secondary-shade">
+                                <div class="mdc-select__anchor width-100-percent" style="background-color: transparent; padding-left: 0;"
+                                 role="button"
+                                 aria-haspopup="listbox"
+                                 aria-expanded="false"
+                                 aria-labelledby="demo-label demo-selected-text">
+                                <span class="mdc-select__selected-text-container height-auto ion-align-self-center">
+                                  <span class="mdc-select__selected-text"></span>
+                                </span>
+                                <span class="mdc-select__dropdown-icon">
+                                     <ion-icon name="caret-down-outline" class="mdc-select__dropdown-icon-inactive"></ion-icon>
+                                     <ion-icon name="caret-up-outline" class="mdc-select__dropdown-icon-active"></ion-icon>
+                                </span>
+                            </div>
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth height-160">
+                                <ul class="mdc-list" role="listbox" aria-label="Flow shirt Blouse">
+                                    <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">NO SIZE</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="0" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">00</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="2" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">02</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="4" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">04</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="6" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">06</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="8"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">08</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="10" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">10</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="12"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="height-36 overline line-height-3">12</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+
+                            <div class="mdc-select width-50-percent mdc-select--filled border-top-1-solid-secondary-shade">
+                                <div class="mdc-select__anchor width-100-percent" style="background-color: transparent; padding-left: 0;"
+                                 role="button"
+                                 aria-haspopup="listbox"
+                                 aria-expanded="false"
+                                 aria-labelledby="demo-label demo-selected-text">
+                                <span class="mdc-select__selected-text-container height-auto ion-align-self-center">
+                                  <span class="mdc-select__selected-text"></span>
+                                </span>
+                                <span class="mdc-select__dropdown-icon">
+                                     <ion-icon name="caret-down-outline" class="mdc-select__dropdown-icon-inactive"></ion-icon>
+                                     <ion-icon name="caret-up-outline" class="mdc-select__dropdown-icon-active"></ion-icon>
+                                </span>
+                            </div>
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth height-160">
+                                <ul class="mdc-list" role="listbox" aria-label="Succulent Set">
+                                    <li class="mdc-list-item" aria-selected="false" data-value="" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <label class="margin-vertical-4 display-inline-block height-36 overline line-height-3">NO COLOR</label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="black" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                               class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--black">
+                                          </label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="orange-A200"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                               class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--orange-A200">
+                                          </label>
+                                    </li>
+                                    <li class="mdc-list-item" aria-selected="false" data-value="light-blue-A200" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                           class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--light-blue-A200">
+                                          </label>
+                                    </li>
+                                    <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="pink-A100"
+                                        aria-disabled="true" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                          <label
+                                               class="background-clip-content-box margin-vertical-4 display-inline-block height-36 width-36 border-2-solid-primary border-radius-50-percent mdl-color--pink-A100">
+                                          </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding-left-48">
+                <div class="ion-padding-vertical ion-padding-end border-top-1-solid-secondary-shade display-flex ion-justify-content-between">
+                    <div>TOTAL</div>
+                    <h5 class="ion-no-margin">$300.60</h5>
+                </div>
+                <div class="display-flex ion-justify-content-between ion-padding-end">
+                    <div>Subtotal</div>
+                    <div>$260.00</div>
+                </div>
+                <div class="display-flex ion-justify-content-between ion-padding-end">
+                    <div>SHipping</div>
+                    <div>$10.00</div>
+                </div>
+                <div class="display-flex ion-justify-content-between ion-padding-end ion-padding-bottom">
+                    <div>Tax</div>
+                    <div>$30.60</div>
+                </div>
+            </div>
+
+            <div class="padding-left-48 ion-padding-vertical border-top-1-solid-secondary-shade">
+                <span class="body-1 ion-padding-end">WISHLIST</span>
+                <span>1 ITEM</span>
+            </div>
+
+            <div class="ion-padding-horizontal ion-text-center ion-padding-bottom">
+                <ion-button class="clip-path-corner-4">
+                    PROCEED TO CHECKOUT
+                </ion-button>
+            </div>
+        `;
+
+        const MDCSelect = mdc.select.MDCSelect;
+
+        const $selects = $element.querySelectorAll('.mdc-select');
+
+        for (const $select of $selects) {
+            const select = new MDCSelect($select);
+            const $selectedText = $select.querySelector('.mdc-select__selected-text');
+            $selectedText.replaceChildren($select.querySelector('.mdc-list-item--selected').children[1].cloneNode(true));
+            select.listen('MDCSelect:change', () => {
+                $selectedText.replaceChildren($select.querySelector('.mdc-list-item--selected').children[1].cloneNode(true));
+            });
+        }
+
+        const $checkoutClose = $element.querySelector('.checkout-close');
+
+        $checkoutClose.addEventListener('click', async () => {
+            await $modal.dismiss();
+        }, {once: true});
+
+        const $modal = document.createElement('ion-modal');
+        $modal.component = $element;
+        document.body.appendChild($modal);
+        $modal.present();
+    }
+
+    $checkoutButton.addEventListener('click', checkoutModal);
+</script>
+
+<!--<script type="module" src="main.js"></script>-->
+</body>
+</html>
