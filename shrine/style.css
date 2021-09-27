@@ -459,6 +459,11 @@ a {
 }
 
 /* padding utils */
+.padding-horizontal-16 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 .padding-1 {
     padding: 1px;
 }
@@ -542,6 +547,15 @@ a {
 /* margin utils */
 .margin-auto {
     margin: auto;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-horizontal-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .margin-left-auto {
@@ -658,6 +672,10 @@ a {
 }
 
 /*display utils*/
+.display-block {
+    display: block;
+}
+
 .display-flex {
     display: flex;
 }
