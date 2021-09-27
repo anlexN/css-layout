@@ -406,6 +406,10 @@ a {
     --border-radius: 50%;
 }
 
+.border-radius-8 {
+    border-radius: 8px;
+}
+
 .border-radius-10 {
     border-radius: 10px;
 }
@@ -595,6 +599,16 @@ a {
 .margin-vertical-4 {
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+.margin-vertical-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.margin-vertical-24 {
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 /*clip utils*/
@@ -823,6 +837,14 @@ a {
     height: 100%;
 }
 
+.height-fit-content {
+    height: fit-content;
+}
+
+.max-height-218 {
+    max-height: 218px;
+}
+
 .max-height-354 {
     max-height: 354px;
 }
@@ -833,6 +855,10 @@ a {
 
 .min-height-200 {
     min-height: 200px;
+}
+
+.max-width-100-percent {
+    max-width: 100%;
 }
 
 .max-width-188 {
@@ -847,6 +873,10 @@ a {
     max-width: 768px;
 }
 
+.max-width-800 {
+    max-width: 800px;
+}
+
 .max-width-992 {
     max-width: 992px;
 }
@@ -857,6 +887,10 @@ a {
 
 .min-width-32 {
     min-width: 32px;
+}
+
+.min-width-360 {
+    min-width: 360px;
 }
 
 .width-6 {
