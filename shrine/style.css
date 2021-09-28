@@ -566,12 +566,20 @@ a {
     margin-left: 24px;
 }
 
+.margin-left-40-percent {
+    margin-left: 40%;
+}
+
 .margin-right-24 {
     margin-right: 24px;
 }
 
 .margin-right-32 {
     margin-right: 12px;
+}
+
+.margin-right-40-percent {
+    margin-right: 40%;
 }
 
 .margin-right-8 {
@@ -826,6 +834,10 @@ a {
     height: 160px;
 }
 
+.height-218 {
+    height: 218px;
+}
+
 .height-242 {
     height: 242px;
 }
@@ -881,6 +893,10 @@ a {
 
 .max-width-188 {
     max-width: 188px;
+}
+
+.max-width-400 {
+    max-width: 400px;
 }
 
 .max-width-550 {
@@ -961,6 +977,10 @@ a {
 
 .width-300 {
     width: 300px;
+}
+
+.width-400 {
+    width: 400px;
 }
 
 .width-fit-content {
